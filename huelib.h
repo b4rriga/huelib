@@ -9,6 +9,7 @@ Copyright (C) 2026 Hugo Barriga
 #define HUELIB_H
 
 #include <stdint.h>
+#include <math.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,7 +19,7 @@ extern "C" {
 //  Color spaces
 // --------------
 typedef struct { float r, g, b; }    RGB;
-typedef struct { RGB rgb; float a; } RGBA;
+typedef struct { float r, g, b, a; } RGBA;
 
 typedef struct { float h, s, v; }    HSV;
 typedef struct { float h, s, l; }    HSL;
@@ -37,9 +38,10 @@ typedef uint32_t BGRA8888;
 //  Color space constructors
 // --------------------------
 RGB color_rgb(float r, float g, float b);
+RGBA color_rgba(float r, float g, float b, float a);
 HSV color_hsv(float h, float s, float v);
 HSL color_hsl(float h, float s, float l);
-CMYK color_hsv(float c, float m, float y, float k);
+CMYK color_cmyk(float c, float m, float y, float k);
 
 // --------------------
 //  Conversions to RGB
