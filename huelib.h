@@ -1,6 +1,6 @@
 /*
 
-HueLib: Color space and chromatic operations library.
+HueLib: Color space and chromatic operations library
 Copyright (C) 2026 Hugo Barriga
 
 */
