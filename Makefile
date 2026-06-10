@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -Wall -Wextra -Wpedantic -Werror -std=c11 -O3
+CFLAGS := -Wall -Wextra -Wpedantic -Werror -std=c11 -O3 -lm
 
 PREFIX ?= /usr/local
 INCLUDEDIR := $(PREFIX)/include
